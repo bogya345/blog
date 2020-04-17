@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodbservice://localhost:27017/test');
 
 const Cat = mongoose.model('Cat', { name : String });
 
@@ -12,41 +12,15 @@ kitty.save().then(()=>console.log('meow'));
 
 // const app = express();
 
+// var indexRouter = require('./routes/index');
+
 // app.use(bodyParser.urlencoded({ extended : true }));
 // app.use(bodyParser.json());
 
-// const posts = [
-//     {
-//         title : 'Hello World',
-//         text : 'lorem 1'
-//     },
-//     {
-//         title : 'Hello World2',
-//         text : 'lorem 2'
-//     },
-//     {
-//         title : 'Hello World3',
-//         text : 'lorem 3'
-//     },
-// ];
-
-// app.get('/posts', function(req, res) {
-//     return res.send(posts);
-// });
-
-// app.get('/posts/:id', function(req, res) {
-//     let id = req.params.id;
-//     return res.send(posts[id]);
-// });
-
-// app.post('/posts', function(req, res) {
-//     const data = req.body;
-//     console.log(data);
-//     posts.push(data);
-//     return res.send(posts);
-// });
-
+// app.use('/', indexRouter);
 
 // app.listen(3333, function(){
 //     console.log('Server is running');
-// })
+// });
+
+// module.exports = app;
